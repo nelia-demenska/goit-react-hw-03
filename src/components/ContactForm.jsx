@@ -5,10 +5,10 @@ import css from './ContactForm.module.css'
 const UserSchema = Yup.object().shape({
     name: Yup.string()
     .min(3, 'Must be min 3 chars')
-    .required('This field is required'),
-    number: Yup.number()
+    .required('Required'),
+    number: Yup.string()
         .min(3)
-        .required('This field is required'),
+        .required('Required'),
 });
 
 export default function ContactForm({addContact}) {
